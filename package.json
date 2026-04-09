@@ -1,0 +1,12 @@
+{
+  "name": "info-research-report",
+  "version": "1.0.0",
+  "description": "信息调研报告自动化工作流",
+  "main": "run.py",
+  "author": "zafer",
+  "dependencies": {
+    "python-docx": "^1.1.0",
+    "requests": "^2.31.0",
+    "beautifulsoup4": "^4.12.0"
+  }
+}
