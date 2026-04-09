@@ -26,16 +26,6 @@ info-research-report/
 └── output/                  # 生成的报告输出目录
 ```
 
-### 核心模块说明
-
-| 模块 | 功能 |
-|------|------|
-| run.py | 命令行入口，参数解析和流程控制 |
-| fetcher.py | 网页抓取，优先使用 MCP，失败时 fallback 到 requests |
-| parser.py | 解析搜索结果为结构化 JSON |
-| report_generator.py | 生成政府风格 DOCX 报告 |
-| llm_client.py | 调用 MiniMax/OpenAI 生成摘要 |
-
 ## 功能
 
 - 一键生成政府/机关风格的 DOCX 调研报告
