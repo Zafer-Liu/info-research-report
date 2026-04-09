@@ -115,8 +115,6 @@ pip install -r requirements.txt
 - `MINIMAX_API_KEY` - MiniMax API Key（用于生成摘要）
 - `OPENAI_API_KEY` - OpenAI API Key（备用）
 
-> ⚠️ 本 skill 目录已包含 `.env` 文件，内置 MiniMax API Key。
-
 ---
 
 ## 示例
