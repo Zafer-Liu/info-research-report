@@ -2,6 +2,40 @@
 
 一个用于自动生成政府风格调研报告的 OpenClaw Skill。
 
+## 项目架构
+
+```
+info-research-report/
+├── run.py                    # 主入口脚本
+├── requirements.txt          # Python 依赖
+├── .env                      # 环境变量配置
+├── browseros-mcp/           # 内置 MCP 服务（可选）
+│   ├── package.json
+│   ├── server.js
+│   └── ...
+├── src/
+│   ├── __init__.py
+│   ├── fetcher.py           # 网页内容获取（支持 MCP fallback）
+│   ├── parser.py            # 搜索结果解析
+│   ├── report_generator.py  # DOCX 报告生成
+│   ├── llm_client.py        # LLM API 调用封装
+│   └── templates/           # 报告模板
+│       └── default.docx
+├── results/                  # 搜索结果目录
+│   └── results.json
+└── output/                  # 生成的报告输出目录
+```
+
+### 核心模块说明
+
+| 模块 | 功能 |
+|------|------|
+| run.py | 命令行入口，参数解析和流程控制 |
+| fetcher.py | 网页抓取，优先使用 MCP，失败时 fallback 到 requests |
+| parser.py | 解析搜索结果为结构化 JSON |
+| report_generator.py | 生成政府风格 DOCX 报告 |
+| llm_client.py | 调用 MiniMax/OpenAI 生成摘要 |
+
 ## 功能
 
 - 一键生成政府/机关风格的 DOCX 调研报告
