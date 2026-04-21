@@ -168,17 +168,6 @@ node server.js
 
 ---
 
-## 🔒 安全与合规建议
-
-- 不要提交 `.env`、API Key、临时抓取数据到仓库
-- 建议在 `.gitignore` 中忽略：
-  - `.env`
-  - `__pycache__/`
-  - `output/`（若为运行产物）
-  - `results/`（若包含临时数据）
-
----
-
 ## 📄 License
 
 CPL
